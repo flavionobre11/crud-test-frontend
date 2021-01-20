@@ -1,0 +1,84 @@
+.body-login {
+    display: flex;
+    flex-direction: row;
+    justify-items:center;
+    align-items: center;
+    align-content: center;
+    height: 100vh;
+
+    background: var(--bg-img);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+}
+
+a{
+    color: var(--links);
+    transition: .3s;
+}
+
+a:hover{
+    color:var(--links-hover);
+}
+.container {
+    max-width: 400px;
+    width: calc(300px + 10vw);
+    min-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px 30px;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+    border-radius: 10px;
+    border: 1px solid var(--border-color);
+    background-color: var(--content-fill);
+
+}
+
+.form-input-1{
+    display: block;
+    background-clip: padding-box;
+    margin-bottom:10px;
+    border: none !important;
+    outline: none !important;
+    background-color: var(--input-fill);
+    color: var(--input-text);
+    transition: .2s !important;
+    border: 1px solid var(--border-color) !important;
+}
+
+.btn-edit {
+    width: 100%;
+    border:none;
+    background-color: var(--button-bg-color);
+}
+
+.btn-edit:hover{
+    background-color: var(--button-bg-color-hover) !important;   
+}
+
+.btn-edit:focus{
+    background-color: var(--button-bg-color);
+}
+.btn-edit:active{
+    background-color: var(--button-bg-color) !important;
+    border:none !important;
+}
+
+.invalid-feedback{
+    margin-top: -.5rem;
+    margin-bottom:0.4rem;
+    font-size: .7rem;
+}
+.valid-feedback{
+    margin-top: -.5rem;
+    margin-bottom:0.4rem;
+    font-size: .7rem;
+}
+
+
+img {
+    width: 4rem;
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;900&display=swap');
+
+:root {
+    /* img */
+    --bg-img: url('https://static.vecteezy.com/system/resources/previews/001/381/131/non_2x/sunset-landscape-background-with-mountains-vector.jpg') no-repeat center top fixed;
+
+    /* colors */
+    --body-bg-color: rgb(240, 240, 240);
+    --body-text-color: rgb(68, 68, 68);
+    --content-fill: #ffffff;
+    --input-fill: #dbdbdb;
+    --input-text: rgb(46, 46, 46);
+    --border-color: #b5d8de31;
+    --button-bg-color: #565374;
+    --button-bg-color-hover:#484661;
+    --links: #565374;
+    --links-hover: #645f9c;
+}
+
+body.dark-mode{
+    /* img */
+    --bg-img: url('https://static.vecteezy.com/system/resources/previews/001/634/969/non_2x/winter-night-landscape-with-forest-and-mountains-vector.jpg') no-repeat center top fixed;
+
+
+    /* colors */
+    --body-bg-color: rgb(39, 39, 39);
+    --body-text-color: rgb(255, 255, 255);
+    --content-fill: #00202B;
+    --input-fill: #132b33;
+    --input-text: #fff;
+    --border-color: #b5d8de31;
+    --button-bg-color: #136775;
+    --button-bg-color-hover:#104f5a;
+    --links: #108ca1;
+    --links-hover: #2fbdaa;
+
+    
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background-color: var(--body-bg-color);
+    color: var(--body-text-color);
+    transition: .3s;
+}
