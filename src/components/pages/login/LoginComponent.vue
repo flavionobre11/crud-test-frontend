@@ -8,7 +8,7 @@
             <div class="form-group form-edit">
                     
                 <!-- email -->
-                <input type="email" class="form-input-1 shadow-none form-control" id="emailInput" placeholder="email" value="" required>
+                <input type="email" class="form-input-1 shadow-none form-control" id="emailInput" placeholder="email" value="" required autofocus>
                 <div class="valid-feedback">
                     Parece bom!
                 </div>
