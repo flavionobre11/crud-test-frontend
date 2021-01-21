@@ -1,4 +1,5 @@
 // Example starter JavaScript for disabling form submissions if there are invalid fields
+
 (function() {
     'use strict';
     window.addEventListener('load', function() {
@@ -16,3 +17,16 @@
       });
     }, false);
   })();
+
+
+
+  // trocar para dark-mode se for noite.
+  window.addEventListener('load', function changeTheme(){
+    let now = new Date();
+    now = now.getHours();
+    console.log(now)
+
+    if(0<now<=6 || 17<now<=24){
+      return document.body.className = "dark-mode";
+    }
+  })
