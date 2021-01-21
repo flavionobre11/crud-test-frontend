@@ -49,6 +49,10 @@ a:hover{
     border: 1px solid var(--border-color) !important;
 }
 
+.form-input-1:focus{
+    border: 1px solid var(--button-bg-color) !important;
+}
+
 .btn-edit {
     width: 100%;
     border:none;

@@ -1,0 +1,2 @@
+export const SET_EMPLOYER = 'AUTH/SET_EMPLOYER'
+export const SET_TOKEN = 'AUTH/SET_TOKEN'
