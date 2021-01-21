@@ -7,7 +7,7 @@
       var forms = document.getElementsByClassName('needs-validation');
       // Loop over them and prevent submission
       var validation = Array.prototype.filter.call(forms, function(form) {
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('click', function(event) {
           if (form.checkValidity() === false) {
             event.preventDefault();
             event.stopPropagation();
@@ -26,7 +26,9 @@
     now = now.getHours();
     console.log(now)
 
-    if(0<now<=6 || 17<now<=24){
+    if((0<now && now<=6) || (17<now && now<=24)){
       return document.body.className = "dark-mode";
+    }else{
+      return document.body.classList.remove = "dark-mode";
     }
   })
