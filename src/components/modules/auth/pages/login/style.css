@@ -50,11 +50,7 @@ a:hover{
     border: 1px solid var(--border-color) !important;
 }
 
-<<<<<<< HEAD:src/components/pages/login/style.css
-.form-input-1:focus {
-=======
 .form-input-1:focus{
->>>>>>> d5cbd85b0b03bc9057cec10dbc1232e3988e3d10:src/components/modules/auth/pages/login/style.css
     border: 1px solid var(--button-bg-color) !important;
 }
 
