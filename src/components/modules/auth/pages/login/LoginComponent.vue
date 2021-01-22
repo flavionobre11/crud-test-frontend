@@ -52,7 +52,6 @@ export default {
         async login(){
             try {
                 await this.ActionLogin(this.loginData)
-
                 alert('login efetuado')
                 this.$router.push({ name: 'home' })
             } catch (err) {

@@ -1,4 +1,5 @@
 import { http } from '@/services/axios/'
+import * as storage from '../storage'
 import * as types from './mutation-types'
 
 
@@ -18,5 +19,13 @@ export const ActionSetEmployer = ({ commit }, payload) => {
 
 // action de salvar token no state
 export const ActionSetToken = ({ commit }, payload) => {
-    commit(types.SET_TOKEN, payload)
+    storage.setLocalToken(payload);
+    storage.setHeaderToken(payload);
+    commit(types.SET_TOKEN, payload);
+}
+
+export const ActionSingOut = ({ dispatch }) =>{
+
+    dispatch('ActionSetEmployer', {});
+    dispatch('ActionSetToken', '');
 }

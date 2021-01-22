@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-export const http = axios.create({
+const http = axios.create({
     baseURL: 'http://localhost:3001',
     timeout:1000,
     headers:{
@@ -8,6 +8,12 @@ export const http = axios.create({
         'Access-Control-Allow-Origin': '*'
     }
 })
+
+const setBearerToken = token =>{
+    http.defaults.headers.common['Authorization'] = `Bearer ${token}`
+}
+
+export {http, setBearerToken}
 
 // axios esta sendo utilizado nas actions do vuex
 // verificar em components>modules>auth>store
