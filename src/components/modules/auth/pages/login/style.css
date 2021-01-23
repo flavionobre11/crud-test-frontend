@@ -73,17 +73,14 @@ a:hover{
 }
 
 .invalid-feedback{
+    display: block;
     margin-top: -.5rem;
     margin-bottom:0.4rem;
     font-size: .7rem;
 }
 .valid-feedback{
+    display: block;
     margin-top: -.5rem;
     margin-bottom:0.4rem;
     font-size: .7rem;
-}
-
-
-img {
-    width: 4rem;
 }
