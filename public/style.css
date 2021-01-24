@@ -15,6 +15,11 @@
     --button-bg-color-hover:#484661;
     --links: #565374;
     --links-hover: #645f9c;
+
+    /* menu buttons in homecomponent */
+    --bg-menu-buttom: #2c7da0;
+    --text-menu-buttom: #fff;
+    --hover-menu-buttom: #014f86;
 }
 
 body.dark-mode{

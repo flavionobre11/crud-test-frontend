@@ -1,35 +1,50 @@
 <template>
   <div id="home" class="container-fluid">
-    <div class="row row-md">
-      <nav class="navbar">
-        <div class="col col-md">
-          <a class="navbar-brand">Contacts</a>
-          <div class="btn-group">
-            <button class="btn btn-sm dropdown-toggle shadow-none" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Olá, {{ employerName }}
-            </button>
-            <div class="dropdown-menu dropdown-content">
-              <h6 class="dropdown-header">Que opção deseja ver?</h6>
-              <a class="dropdown-item" href="#">Perfil</a>
-              <a class="dropdown-item" href="#">Sobre</a>
-              <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Sair</a>
-            </div>
-          </div>
-        </div>
-      </nav>
+    <!-- header -->
+    <div class="header">
+      <h3> Olá, {{ firstName }} :)</h3>
+      <p>o que vamos fazer hoje?</p>
+    </div>
+
+    <!-- menu -->
+    <div class="menu">
+      <Buttons propsName="Contacts" propsDescription="Crie, edite e acompanhe seus contatos." route="contacts"/>
+      <Buttons propsName="Ranking" propsDescription="Verifique quais funcionarios cadastram mais contatos." route="ranking" />
+    </div>
+    <hr>
+    <div class="activity">
+      <Activity />
     </div>
   </div>
 </template>
 
 <script>
+import { mapState } from 'vuex'
+import Activity from './activity/Activity';
+import Buttons from './menu/Buttons';
 
 export default {
+  components: { Buttons, Activity },
+  name: 'HomeComponent',
   data(){
     return {
-      employerName: this.$store.state.auth.employer.name
     }
   },
+  methods:{
+    contacts(){
+      console.log('ola');
+      this.$router.push({ name:'contacts' });
+      this.$router.go();
+    }
+  },
+  computed:{
+    ...mapState('auth', ['employer']),
+    firstName(){
+      let firstName = this.employer.name;
+      return firstName.split(' ')[0]
+    },
+
+  }
 }
 </script>
 

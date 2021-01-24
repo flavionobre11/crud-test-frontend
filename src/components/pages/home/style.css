@@ -1,52 +1,26 @@
-* {
-    transition: 0;
+
+/* HEADER 🔥 */
+
+.header {
+    padding: 2rem .8rem;
 }
 
-.col {
-    text-align: right;
-    background-color: tomato;
-    
-}
-
-.navbar-brand a {
-    text-align: center !important;
-    margin-right: auto;
-    margin-left: auto;
-}
-
-.navbar {
-    width: 100vw;
-}
-
-.btn{
-    background-color: transparent;
-    color: var(--body-text-color);
-    font-size: 1rem;
-    position: relative;
-}
-
-.dropdown-menu {
-    margin: 0;
-    transition: 0;
-}
-
-.dropdown-content {
-    margin-right: 3rem;
-    border-radius: 10%;
-    color: var(--body-text-color);
-}
-
-.dropdown-header {
+.header h3{
     font-weight: 700;
-    color: var(--body-text-color);
+    padding: 0;
+    margin:0;
 }
 
-.dropdown-item {
-    font-size: .8rem;
-    color: var(--body-text-color);
+.header p{
+    margin:0;
 }
 
-.dropdown-item:active{
-    font-weight: 400;
-    background-color: rgb(79, 172, 226);
+.menu{
+    display: flex;
+    width: auto;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 3rem;
 }
