@@ -12,6 +12,37 @@ export const ActionLogin = ({ dispatch }, payload) => {
     })
 }
 
+export const ActionCheckToken = ({ dispatch, state }) => {
+    if (state.token) {
+        return Promise.resolve(state.token)
+    }
+
+    const token = storage.getLocalToken();
+
+    if (!token){
+        return Promise.reject(new Error ('token invalido.'))
+    }
+
+    dispatch('ActionSetToken', token);
+    return dispatch('ActionLoadSession')
+}
+
+
+
+export const ActionLoadSession = ({ dispatch }) => {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const { data: { token, employer } } = await http.get('/employer/load_session')
+            dispatch('ActionSetEmployer', employer);
+            dispatch('ActionSetToken', token);
+            resolve()
+        } catch (err) {
+            dispatch('ActionSingOut');
+            reject(err);
+        }
+    })
+}
+
 // action de salvar informacoes do employer no state
 export const ActionSetEmployer = ({ commit }, payload) => {
     commit(types.SET_EMPLOYER, payload)
@@ -25,6 +56,8 @@ export const ActionSetToken = ({ commit }, payload) => {
 }
 
 export const ActionSingOut = ({ dispatch }) =>{
+    storage.setHeaderToken('');
+    storage.deleteLocalToken('');
 
     dispatch('ActionSetEmployer', {});
     dispatch('ActionSetToken', '');

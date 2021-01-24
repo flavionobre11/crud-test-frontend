@@ -43,24 +43,8 @@ export default {
             }
         }
     },
-    created(){
-        let now = new Date();
-        now = now.getHours();
-
-        if((0<=now && now<=6) || (17<now && now<=24)){
-            return document.body.className = "dark-mode";
-        }else{
-            return document.body.classList.remove = "dark-mode";
-        }
-    },
     methods: {
         ...mapActions('auth', ['ActionLogin']),
-        
-        // emailValidation(email){
-        //     if(!email) return false
-        //     if(/\S+@\S+\.\S+/.test(email)) return true
-        //     return false
-        // },
 
         emailValidation(email){
             if(!email){
@@ -92,45 +76,27 @@ export default {
 
         async login(){
             if(!(this.emailValidation(this.loginData.email))){
-                return alert('digite um email valido');
+                return
             }
             this.emailError = false;
             
             if(!(this.passwordValidation(this.loginData.password))){
-                return alert('digite uma senha');
+                return
             }
             this.passwordError = false;
 
             try {
                 await this.ActionLogin(this.loginData)
-                alert('login efetuado')
                 this.$router.push({ name: 'home' })
             } catch (err) {
                 alert(err.response.data ? err.response.data.message: 'Não foi possivel fazer login')
             }
         }
-
-        // async login(){
-        //     try{
-
-        //         if(!this.loginData.email)
-        //            return alert('digite um email valido');
-    
-        //         await Employer.login(this.loginData)
-        //         .then(response =>{
-        //             console.log(response.data)
-        //         }).catch(err => {
-        //             console.log("metodo login() "+err.response.data.message)
-        //         })
-        //     } catch(err){
-        //         console.log("error " + err)
-        //     }
-        // }
     }
 
 }
 </script>
 
-<style scoped src="./style.css" \>
-
+<style scoped src="../style.css" \>
+    
 </style>

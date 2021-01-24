@@ -1,9 +1,9 @@
 .body-login {
     display: flex;
     flex-direction: row;
-    justify-items:center;
     align-items: center;
-    align-content: center;
+    margin-left: auto;
+    margin-right: auto;
     height: 100vh;
     transition: 1s;
     background: var(--bg-img);
@@ -83,4 +83,9 @@ a:hover{
     margin-top: -.5rem;
     margin-bottom:0.4rem;
     font-size: .7rem;
+}
+
+.body-destroy{
+    opacity: 0;
+    transition: 2s;
 }

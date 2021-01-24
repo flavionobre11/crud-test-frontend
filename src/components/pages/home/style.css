@@ -1,0 +1,52 @@
+* {
+    transition: 0;
+}
+
+.col {
+    text-align: right;
+    background-color: tomato;
+    
+}
+
+.navbar-brand a {
+    text-align: center !important;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.navbar {
+    width: 100vw;
+}
+
+.btn{
+    background-color: transparent;
+    color: var(--body-text-color);
+    font-size: 1rem;
+    position: relative;
+}
+
+.dropdown-menu {
+    margin: 0;
+    transition: 0;
+}
+
+.dropdown-content {
+    margin-right: 3rem;
+    border-radius: 10%;
+    color: var(--body-text-color);
+}
+
+.dropdown-header {
+    font-weight: 700;
+    color: var(--body-text-color);
+}
+
+.dropdown-item {
+    font-size: .8rem;
+    color: var(--body-text-color);
+}
+
+.dropdown-item:active{
+    font-weight: 400;
+    background-color: rgb(79, 172, 226);
+}

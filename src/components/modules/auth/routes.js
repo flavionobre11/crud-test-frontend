@@ -1,10 +1,10 @@
-import LoginComponent from './pages/login/LoginComponent'
+import AuthComponent from './pages/AuthComponent'
 
 
 export default [
     {
         name: 'login',
-        path:'/',
-        component:LoginComponent,
+        path:'/login',
+        component:AuthComponent
     }
 ]
