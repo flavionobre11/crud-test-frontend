@@ -1,4 +1,5 @@
 import { http } from '@/services/axios/'
+import * as types from './mutation-types'
 // import * as types from './mutation-types'
 
 
@@ -6,6 +7,10 @@ import { http } from '@/services/axios/'
 // a response nos states
 export const ActionFindEmployer = ({ dispatch }) => {
     http.get('/clients/').then(res => {
-        console.log(res.data)
+        dispatch('ActionSetEmployerList', res.data);
     })
+}
+
+export const ActionSetEmployerList = ({ commit }, payload) => {
+    commit(types.SET_EMPLOYERLIST, payload)
 }
